@@ -1,4 +1,4 @@
-const coinCounter = (amount, array = [0,0,0,0]) => { 
+export const coinCounter = (amount, array = [0,0,0,0]) => { 
   if (amount == 0) {
     return array; 
   }
@@ -31,3 +31,5 @@ const coinCounter = (amount, array = [0,0,0,0]) => {
     return coinCounter((amount-pennies*.01).toFixed(2), array);
   } 
 }
+
+exports.coinCounter = coinCounter; 
