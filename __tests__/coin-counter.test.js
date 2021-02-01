@@ -1,0 +1,1 @@
+import coinCounter from './../js/coin-counter.js';
