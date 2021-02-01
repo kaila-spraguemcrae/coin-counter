@@ -8,4 +8,8 @@ describe('coinCounter', ()=> {
   test("return 20 quarters", () => {
     expect(coinCounter(5)).toEqual([20,0,0,0]); 
   });
+
+  test("return 1 dime", () => {
+    expect(coinCounter(0.10)).toEqual([0, 1, 0, 0]);
+  });
 });
