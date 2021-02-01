@@ -16,4 +16,8 @@ describe('coinCounter', ()=> {
   test("return 1 nickel", () => {
     expect(coinCounter(0.05)).toEqual([0, 0, 1, 0]);
   });
+
+  test("return 1 penny", () => {
+    expect(coinCounter(0.01)).toEqual([0, 0, 0, 1]);
+  });
 });
