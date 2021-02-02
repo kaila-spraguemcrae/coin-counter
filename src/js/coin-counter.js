@@ -81,14 +81,11 @@ exports.coinCounter = coinCounter;
         return index === 2 ? nickels:el
       });
       return coinCounter((amount-nickels*.05).toFixed(2), coinArray);
-    }
-  }
-
-    
-    
-    // else if (amount/.01 >= 1) { 
-    //   const pennies = Math.floor(amount/.01); 
-    //   const penniesArray = [array[0], array[1], array[2], pennies]
-    //   return coinCounter((amount-pennies*.01).toFixed(2), penniesArray);
-    // } 
-  // }; 
+    } else if (amount/.01 >= 1) { 
+      const pennies = Math.floor(amount/.01); 
+      const coinArray = array.map(function(el, index){
+        return index === 3 ? pennies:el
+      });
+      return coinCounter((amount-pennies*.01).toFixed(2), coinArray);
+    } 
+  };
